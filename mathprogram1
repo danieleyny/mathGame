@@ -1,0 +1,24 @@
+import random
+xp=0
+Continue = 1
+questionNum = 0
+while (Continue == 1) :
+  questionNum = questionNum+1
+  x = random.randint(1,5)
+  y = random.randint(1,5)
+  Answer = input("What is " + str(x) + " * " + str(y) + ": ")
+  if Answer == x*y :
+      print ("Correct")
+      xp=xp+1
+  else:
+      print ("Wrong")
+      xp=xp-1
+  print ("Experience Points = "+ str(xp))
+  if questionNum % 10 == 0:
+      Continue = input("Press 0 To Stop or 1 To Continue ")
+if questionNum == xp:
+    print("You Got The Perfect Score" + str(xp))
+    print ("Total Experience Points = " + str(xp))
+else:
+    print ("Goodbye lazy")
+    print ("Total Experience Points = " + str(xp))
